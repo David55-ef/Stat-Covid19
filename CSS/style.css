@@ -1,0 +1,458 @@
+/* ===== VARIABLES ===== */
+:root {
+  --primary: #08124d;
+  --secondary: #ffcc00;
+  --accent: #555dee;
+  --bg: #f5f7fa;
+  --text-dark: #333;
+  --white: #fff;
+  --black: #000;
+  --radius: 10px;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  color: var(--black);
+  min-width: 320px;
+  max-width: 100%;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  color: var(--white);
+  padding: 15px 40px;
+  z-index: 999;
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.logo span {
+  color: var(--secondary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--black);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+/* ===== HAMBURGER MENU ===== */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: var(--transition);
+  z-index: 1001; /* keeps icon above menu */
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* ===== HOME ===== */
+.home {
+  height: 100vh;
+  background: url(../Assets/top-view-black-medical-masks-decorative-balls-with-copy-space.jpg)
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  animation: moveBg 15s infinite linear alternate;
+  overflow: hidden;
+}
+/* Fade-In */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home .content {
+  z-index: 2;
+}
+
+.home .content {
+  z-index: 2;
+}
+
+.home h1 {
+  font-size: 3rem;
+  animation: fadeInDown 2s ease;
+}
+
+.home p {
+  margin: 20px 0;
+  animation: fadeInUp 2s ease;
+}
+
+.home span {
+  color: var(--secondary);
+}
+
+.btn {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--white);
+}
+
+@keyframes moveBg {
+  from {
+    background-position: center top;
+  }
+  to {
+    background-position: center bottom;
+  }
+}
+
+/* About Section */
+.about {
+  height: 100vh;
+  background: url(../Assets/top-view-medical-mask-with-wooden-cubes-saying-covid.jpg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+/* ===== TRACKER  SECTION===== */
+.tracker {
+  height: 100vh;
+  background: url(../Assets/24805.jpg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+.tracker h2 span {
+  color: var(--accent);
+}
+
+.search-section {
+  margin: 30px 0;
+}
+
+#searchbox {
+  width: 300px;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary);
+  outline: none;
+}
+
+#searchbtn {
+  padding: 10px 20px;
+  background: var(--secondary);
+  border: none;
+  border-radius: var(--radius);
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+#searchbtn:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.data-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.data-card:hover {
+  transform: translateY(-8px);
+}
+
+.data-card p {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.data-card h2 span {
+  color: var(--accent);
+  font-size: 2.5rem;
+}
+
+/* ===== PREVENTION ===== */
+.prevention {
+  height: auto;
+  background: url(../Assets/3685923.jpg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.tips-grid :hover {
+  transform: translateY(-5px);
+}
+
+.tip {
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.tip h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== NEWS ===== */
+#news {
+  height: 80vh;
+  background: url(../Assets/coronavirus-pandemic-social-banner.jpg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+#news h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+#news h2 span {
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.news-grid article {
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.news-grid article:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== CONTACT ===== */
+#contact {
+  background: url(../Assets/blood-test-tubes-by-face-mask.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 100px 20px;
+  position: relative;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  resize: none;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links a {
+  color: var(--secondary);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    transition: var(--transition);
+    z-index: 1000;
+  }
+
+  /* Checkbox toggled = slide in */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    right: 0;
+  }
+
+  .nav-links a {
+    color: var(--primary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary);
+  }
+
+  /* Optional dim background when menu opens */
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+}
+/* Adjust home section for smaller screens */
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+/* Adjust grid layouts for smaller screens */
+@media (max-width: 600px) {
+  .grid-container,
+  .tips-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Adjust sections padding for smaller screens */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 15px;
+  }
+}
+/* Adjust header padding for smaller screens */
+@media (max-width: 600px) {
+  .header {
+    padding: 10px 20px;
+  }
+}
+/* Adjust contact form for smaller screens */
+@media (max-width: 500px) {
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+/* Adjust tracker search box for smaller screens */
+@media (max-width: 400px) {
+  #searchbox {
+    width: 200px;
+  }
+}

@@ -1,4 +1,6 @@
-/* ===== VARIABLES ===== */
+/* =================================================== */
+/* 1. VARIABLES                    */
+/* =================================================== */
 :root {
   --primary: #08124d;
   --secondary: #ffcc00;
@@ -12,7 +14,9 @@
   --transition: all 0.3s ease;
 }
 
-/* ===== GLOBAL RESET ===== */
+/* =================================================== */
+/* 2. GLOBAL RESET & BASE              */
+/* =================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +38,28 @@ body {
   line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.btn {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--white);
+}
+
+/* =================================================== */
+/* 3. HEADER & NAV                  */
+/* =================================================== */
 .header {
   position: fixed;
   top: 0;
@@ -78,40 +103,23 @@ body {
   color: var(--secondary);
 }
 
-/* ===== HAMBURGER MENU ===== */
+/* HAMBURGER MENU - Desktop Hidden */
 #menu-toggle {
   display: none;
 }
 
 .menu-icon {
-  display: none;
+  display: none; /* Hidden on Desktop */
   font-size: 1.8rem;
   cursor: pointer;
   color: var(--primary);
   transition: var(--transition);
-  z-index: 1001; /* keeps icon above menu */
+  z-index: 1001;
 }
 
-/* ===== SECTIONS ===== */
-.section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-/* ===== HOME ===== */
-.home {
-  height: 100vh;
-  background: url(../Assests/top-view-black-medical-masks-decorative-balls-with-copy-space.jpg)
-    center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  animation: moveBg 15s infinite linear alternate;
-  overflow: hidden;
-}
-/* Fade-In */
+/* =================================================== */
+/* 4. ANIMATIONS                  */
+/* =================================================== */
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -134,42 +142,6 @@ body {
   }
 }
 
-.home .content {
-  z-index: 2;
-}
-
-.home .content {
-  z-index: 2;
-}
-
-.home h1 {
-  font-size: 3rem;
-  animation: fadeInDown 2s ease;
-}
-
-.home p {
-  margin: 20px 0;
-  animation: fadeInUp 2s ease;
-}
-
-.home span {
-  color: var(--secondary);
-}
-
-.btn {
-  background: var(--secondary);
-  color: var(--primary);
-  padding: 12px 25px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: bold;
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background: var(--white);
-}
-
 @keyframes moveBg {
   from {
     background-position: center top;
@@ -179,7 +151,43 @@ body {
   }
 }
 
-/* About Section */
+/* =================================================== */
+/* 5. SECTIONS                   */
+/* =================================================== */
+
+/* HOME */
+.home {
+  height: 100vh;
+  background: url(../Assests/top-view-black-medical-masks-decorative-balls-with-copy-space.jpg)
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  animation: moveBg 15s infinite linear alternate;
+  overflow: hidden;
+}
+
+.home .content {
+  z-index: 2;
+}
+
+.home h1 {
+  font-size: 3rem;
+  animation: fadeInDown 2s ease; /* Animation is retained */
+}
+
+.home p {
+  margin: 20px 0;
+  animation: fadeInUp 2s ease; /* Animation is retained */
+}
+
+.home span {
+  color: var(--secondary);
+}
+
+/* ABOUT */
 .about {
   height: 100vh;
   background: url(../Assests/top-view-medical-mask-with-wooden-cubes-saying-covid.jpg);
@@ -187,13 +195,14 @@ body {
   border-radius: var(--radius);
 }
 
-/* ===== TRACKER  SECTION===== */
+/* TRACKER */
 .tracker {
   height: 100vh;
   background: url(../Assests/24805.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
+
 .tracker h2 span {
   color: var(--accent);
 }
@@ -255,19 +264,21 @@ body {
   font-size: 2.5rem;
 }
 
-/* ===== PREVENTION ===== */
+/* PREVENTION */
 .prevention {
   height: auto;
   background: url(../Assests/3685923.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
+
 .tips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
+
 .tips-grid :hover {
   transform: translateY(-5px);
 }
@@ -283,17 +294,19 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===== NEWS ===== */
+/* NEWS */
 #news {
   height: 80vh;
   background: url(../Assests/coronavirus-pandemic-social-banner.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
+
 #news h2 {
   margin-bottom: 30px;
   font-size: 2.5rem;
 }
+
 #news h2 span {
   color: var(--accent);
   font-size: 2rem;
@@ -317,7 +330,7 @@ body {
   transform: translateY(-5px);
 }
 
-/* ===== CONTACT ===== */
+/* CONTACT */
 #contact {
   background: url(../Assests/blood-test-tubes-by-face-mask.jpg);
   background-size: cover;
@@ -326,6 +339,7 @@ body {
   padding: 100px 20px;
   position: relative;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -342,7 +356,7 @@ body {
   resize: none;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
   background: var(--black);
   color: var(--white);
@@ -356,17 +370,26 @@ body {
   margin: 0 5px;
 }
 
-/* ===== MOBILE RESPONSIVENESS ===== */
+/* =================================================== */
+/* 6. MOBILE RESPONSIVENESS (Media Queries) */
+/* =================================================== */
 
+/* --- TABLET/MEDIUM DEVICES (Max-width: 768px) --- */
 @media (max-width: 768px) {
+  /* GLOBAL */
+  .section {
+    padding: 80px 15px; /* Adjust section padding */
+  }
+
+  /* HEADER & NAV */
   .menu-icon {
-    display: block;
+    display: block; /* Show hamburger icon */
   }
 
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100%; /* Hidden off-screen */
     height: 100vh;
     width: 250px;
     background: var(--bg);
@@ -396,7 +419,7 @@ body {
     color: var(--secondary);
   }
 
-  /* Optional dim background when menu opens */
+  /* Optional dim background when menu opens (Requires JS to add 'menu-open' class to body) */
   body.menu-open::before {
     content: "";
     position: fixed;
@@ -408,10 +431,27 @@ body {
     z-index: 999;
   }
 }
-/* Adjust home section for smaller screens */
+
+/* --- SMALL TABLET/LARGE PHONE (Max-width: 600px) --- */
+@media (max-width: 600px) {
+  /* HEADER */
+  .header {
+    padding: 10px 20px; /* Adjust header padding */
+  }
+
+  /* GRIDS */
+  .grid-container,
+  .tips-grid,
+  .news-grid {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
+}
+
+/* --- MOBILE PHONES (Max-width: 480px) --- */
 @media (max-width: 480px) {
+  /* HOME */
   .home h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller heading */
   }
 
   .home p {
@@ -422,37 +462,24 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-}
-/* Adjust grid layouts for smaller screens */
-@media (max-width: 600px) {
-  .grid-container,
-  .tips-grid,
-  .news-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* Adjust sections padding for smaller screens */
-@media (max-width: 768px) {
-  .section {
-    padding: 80px 15px;
-  }
-}
-/* Adjust header padding for smaller screens */
-@media (max-width: 600px) {
-  .header {
-    padding: 10px 20px;
-  }
-}
-/* Adjust contact form for smaller screens */
-@media (max-width: 500px) {
+
+  /* CONTACT */
   .contact-form {
     width: 100%;
     padding: 0 10px;
   }
 }
-/* Adjust tracker search box for smaller screens */
+
+/* --- VERY SMALL PHONES (Max-width: 400px) --- */
 @media (max-width: 400px) {
+  /* TRACKER */
   #searchbox {
-    width: 200px;
+    width: 100%; /* Allow searchbox to take full width for better tapping */
+    margin-bottom: 10px;
+  }
+
+  #searchbtn {
+    width: 100%;
+    margin-left: 0;
   }
 }

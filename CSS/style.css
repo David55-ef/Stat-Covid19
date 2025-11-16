@@ -101,7 +101,7 @@ body {
 /* ===== HOME ===== */
 .home {
   height: 100vh;
-  background: url(../Assets/top-view-black-medical-masks-decorative-balls-with-copy-space.jpg)
+  background: url(../Assests/top-view-black-medical-masks-decorative-balls-with-copy-space.jpg)
     center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -182,7 +182,7 @@ body {
 /* About Section */
 .about {
   height: 100vh;
-  background: url(../Assets/top-view-medical-mask-with-wooden-cubes-saying-covid.jpg);
+  background: url(../Assests/top-view-medical-mask-with-wooden-cubes-saying-covid.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
@@ -190,7 +190,7 @@ body {
 /* ===== TRACKER  SECTION===== */
 .tracker {
   height: 100vh;
-  background: url(../Assets/24805.jpg);
+  background: url(../Assests/24805.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
@@ -258,7 +258,7 @@ body {
 /* ===== PREVENTION ===== */
 .prevention {
   height: auto;
-  background: url(../Assets/3685923.jpg);
+  background: url(../Assests/3685923.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
@@ -286,7 +286,7 @@ body {
 /* ===== NEWS ===== */
 #news {
   height: 80vh;
-  background: url(../Assets/coronavirus-pandemic-social-banner.jpg);
+  background: url(../Assests/coronavirus-pandemic-social-banner.jpg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
@@ -319,7 +319,7 @@ body {
 
 /* ===== CONTACT ===== */
 #contact {
-  background: url(../Assets/blood-test-tubes-by-face-mask.jpg);
+  background: url(../Assests/blood-test-tubes-by-face-mask.jpg);
   background-size: cover;
   background-position: center;
   color: var(--white);
